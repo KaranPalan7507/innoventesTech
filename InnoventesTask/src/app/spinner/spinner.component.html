@@ -1,0 +1,9 @@
+<div class="spinner-wrapper">
+  <div class="decrement" [ngClass]="{'disabled':currentValue === minValue}" (click)="decrementValue()">
+    <i class="fas fa-minus"></i>
+  </div>
+  <div class="value">{{currentValue}}</div>
+  <div class="increment" [ngClass]="{'disabled':currentValue === maxValue}" (click)="incrementValue()">
+    <i class="fas fa-plus"></i>
+  </div>
+</div>

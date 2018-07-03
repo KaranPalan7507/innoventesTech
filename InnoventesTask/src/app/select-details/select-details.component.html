@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="heading">
+    <i class="fas fa-users"></i>
+    Choose number of
+    <span class="bold">people</span>
+  </div>
+  <div class="select-area">
+    <div class="select-field">
+      <div class="field-name">
+        <i class="fas fa-bed"></i>
+        Rooms
+      </div>
+      <div class="spinner">
+        <app-spinner #roomsSpinner [minValue]=1 [maxValue]=5 [currentValue]=1 (valueUpdate)="setPersonsMaxValue($event)"></app-spinner>
+      </div>
+    </div>
+    <hr>
+    <div class="select-field">
+      <div class="field-name">
+        <i class="fas fa-user"></i>
+        Adults
+      </div>
+      <div class="spinner">
+        <app-spinner #adultSpinner [minValue]=1 [currentValue]=1 [maxValue]="adultMaxValue" (valueUpdate)="setChildMaxValue()"></app-spinner>
+      </div>
+    </div>
+    <hr>
+
+    <div class="select-field">
+      <div class="field-name">
+        <i class="fas fa-child"></i>
+        Children
+      </div>
+      <div class="spinner">
+        <app-spinner #childSpinner [minValue]=0 [maxValue]="childMaxValue" (valueUpdate)="setAdultMaxValue()"></app-spinner>
+      </div>
+    </div>
+  </div>
+</div>
